@@ -1,0 +1,45 @@
+.features {
+  padding: 30px 8%;
+  background-color: #f3f7ee;
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 20px;
+  border-right: 1px solid #cdd8ca;
+}
+
+.feature-item:last-child {
+  border-right: none;
+}
+
+.feature-icon {
+  width: 58px;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #2c6e3f;
+  border-radius: 50%;
+  color: #2c6e3f;
+}
+
+.feature-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.feature-item h3 {
+  margin: 0;
+  color: #111;
+  font-size: 20px;
+}

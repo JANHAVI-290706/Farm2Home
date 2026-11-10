@@ -1,0 +1,600 @@
+.farmer-dashboard {
+  display: flex;
+  min-height: 80vh;
+  background: #f7f9f6;
+  font-family: Arial, sans-serif;
+}
+
+/* SIDEBAR */
+
+.farmer-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: #fff;
+  padding: 28px 20px;
+  border-right: 1px solid #e5e9e3;
+  display: flex;
+  flex-direction: column;
+}
+
+.farmer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #258044;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 35px;
+}
+
+.farmer-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e8ece7;
+}
+
+.farmer-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #e5f4e8;
+  color: #258044;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.farmer-user h3 {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+
+.farmer-user p {
+  margin: 0;
+  color: #777;
+  font-size: 12px;
+}
+
+/* MENU */
+
+.farmer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 25px;
+}
+
+.farmer-menu button,
+.farmer-logout {
+  border: none;
+  background: transparent;
+  padding: 13px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #555;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.farmer-menu button:hover,
+.farmer-menu button.active {
+  background: #eaf5ec;
+  color: #258044;
+}
+
+.farmer-logout {
+  margin-top: auto;
+  color: #d64545;
+}
+
+.farmer-logout:hover {
+  background: #fff0f0;
+}
+
+/* MAIN */
+
+.farmer-main {
+  flex: 1;
+  min-width: 0;
+  padding: 40px;
+}
+
+.farmer-welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.farmer-welcome h1 {
+  color: #243b2b;
+  font-size: 28px;
+  margin: 0 0 9px;
+}
+
+.farmer-welcome p {
+  color: #777;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* BUTTONS */
+
+.farmer-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  background: #278345;
+  color: #fff;
+  padding: 11px 16px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.farmer-primary-btn:hover {
+  background: #1d6836;
+}
+
+.farmer-cancel-btn {
+  background: #eeeeee;
+  color: #444;
+  border: none;
+  padding: 11px 17px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* STATISTICS */
+
+.farmer-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 17px;
+  margin-bottom: 30px;
+}
+
+.farmer-stat-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.farmer-stat-icon {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.farmer-stat-icon.green {
+  background: #e7f5e9;
+  color: #278345;
+}
+
+.farmer-stat-icon.orange {
+  background: #fff1df;
+  color: #e18a25;
+}
+
+.farmer-stat-icon.blue {
+  background: #e8f1ff;
+  color: #3976cf;
+}
+
+.farmer-stat-icon.purple {
+  background: #f1eaff;
+  color: #8252c9;
+}
+
+.farmer-stat-card p {
+  margin: 0 0 7px;
+  color: #777;
+  font-size: 12px;
+}
+
+.farmer-stat-card h2 {
+  margin: 0;
+  color: #263a2c;
+  font-size: 23px;
+}
+
+/* CONTENT CARD */
+
+.farmer-card {
+  background: #fff;
+  padding: 26px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+
+.farmer-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.farmer-section-heading h2 {
+  margin: 0 0 8px;
+  color: #263a2c;
+}
+
+.farmer-section-heading p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.farmer-section-heading > button:not(.farmer-primary-btn) {
+  border: none;
+  background: transparent;
+  color: #278345;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* PRODUCTS */
+
+.farmer-product-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.farmer-product-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 17px 0;
+  border-bottom: 1px solid #edf0ec;
+}
+
+.farmer-product-row:last-child {
+  border-bottom: none;
+}
+
+.farmer-product-icon {
+  width: 46px;
+  height: 46px;
+  background: #eaf5ec;
+  color: #278345;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.farmer-product-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.farmer-product-info h3 {
+  margin: 0 0 5px;
+  color: #263a2c;
+  font-size: 14px;
+}
+
+.farmer-product-info p {
+  margin: 3px 0;
+  color: #777;
+  font-size: 12px;
+}
+
+.farmer-product-stock {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 12px;
+  color: #777;
+}
+
+.farmer-product-stock strong {
+  color: #263a2c;
+}
+
+.farmer-product-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.farmer-product-actions button {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  background: #eaf5ec;
+  color: #278345;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.farmer-product-actions .farmer-delete-btn {
+  background: #fff0f0;
+  color: #d64545;
+}
+
+/* PRODUCT FORM */
+
+.farmer-product-form {
+  padding: 22px;
+  background: #f8faf7;
+  border: 1px solid #e5e9e3;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.farmer-product-form h3 {
+  margin: 0 0 20px;
+  color: #263a2c;
+}
+
+.farmer-form-grid,
+.farmer-profile-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.farmer-form-grid label,
+.farmer-profile-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  color: #555;
+}
+
+.farmer-form-grid input,
+.farmer-form-grid select,
+.farmer-profile-form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px;
+  border: 1px solid #dce5dc;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+  outline: none;
+}
+
+.farmer-form-grid input:focus,
+.farmer-form-grid select:focus,
+.farmer-profile-form input:focus {
+  border-color: #278345;
+}
+
+.farmer-form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.farmer-success-message {
+  padding: 12px;
+  border-radius: 7px;
+  background: #e6f5e9;
+  color: #278345;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* ORDERS */
+
+.farmer-order-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.farmer-order-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 19px 0;
+  border-bottom: 1px solid #edf0ec;
+}
+
+.farmer-order-row:last-child {
+  border-bottom: none;
+}
+
+.farmer-order-row h3 {
+  font-size: 14px;
+  margin: 0 0 7px;
+  color: #263a2c;
+}
+
+.farmer-order-row p {
+  margin: 4px 0;
+  font-size: 12px;
+  color: #777;
+}
+
+.farmer-order-row strong {
+  display: inline-block;
+  margin-top: 7px;
+  color: #263a2c;
+}
+
+.farmer-order-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 9px;
+}
+
+.farmer-order-actions select {
+  padding: 8px;
+  border: 1px solid #dce5dc;
+  border-radius: 6px;
+  background: white;
+  font-size: 12px;
+}
+
+.farmer-status {
+  display: inline-block;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.farmer-status.pending {
+  background: #fff1df;
+  color: #c47a1e;
+}
+
+.farmer-status.processing {
+  background: #e8f1ff;
+  color: #3976cf;
+}
+
+.farmer-status.delivered {
+  background: #e6f5e9;
+  color: #278345;
+}
+
+.farmer-status.cancelled {
+  background: #fff0f0;
+  color: #d64545;
+}
+
+/* PROFILE */
+
+.farmer-profile-form input:disabled {
+  background: #eef2ed;
+  cursor: not-allowed;
+}
+
+.farmer-empty {
+  padding: 30px;
+  text-align: center;
+  color: #777;
+}
+
+/* MOBILE MENU */
+
+.farmer-mobile-menu {
+  display: none;
+}
+
+/* TABLET */
+
+@media (max-width: 1050px) {
+  .farmer-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 850px) {
+  .farmer-sidebar {
+    width: 220px;
+  }
+
+  .farmer-main {
+    padding: 25px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .farmer-dashboard {
+    display: block;
+  }
+
+  .farmer-mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    padding: 9px;
+    background: white;
+    border: 1px solid #e5e9e3;
+    border-radius: 7px;
+    color: #258044;
+    cursor: pointer;
+  }
+
+  .farmer-sidebar {
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    border-right: none;
+    border-bottom: 1px solid #e5e9e3;
+  }
+
+  .farmer-sidebar.show {
+    display: flex;
+  }
+
+  .farmer-main {
+    padding: 15px;
+  }
+
+  .farmer-welcome {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .farmer-welcome h1 {
+    font-size: 23px;
+  }
+
+  .farmer-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .farmer-card {
+    padding: 18px;
+  }
+
+  .farmer-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .farmer-product-row {
+    flex-wrap: wrap;
+  }
+
+  .farmer-product-info {
+    flex-basis: calc(100% - 65px);
+  }
+
+  .farmer-form-grid,
+  .farmer-profile-form {
+    grid-template-columns: 1fr;
+  }
+
+  .farmer-order-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .farmer-order-actions {
+    align-items: flex-start;
+  }
+}
